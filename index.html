@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/amazon.png?raw=true" alt="" height="35"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-map-marker-alt me-2"></i>Enviar a <span class="fw-bold">colombia</span></a>
+                  </li>
+                </ul>
+                <form class="mx-auto w-navbar input-group mb-3">
+                <span class="input-group-text w-auto"><select id="productos" class="form-select">
+                    <option>todos</option>
+                    <option>xbox serie x</option>
+                    <option>nintendo switch</option>
+                    <option>poly station</option>
+                    <option>play station 5</option>
+                  </select>
+                </span>
+                  <input class="form-control me-2" type="search" aria-label="Search">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li>
+                    <a class="nav-link active" aria-current="page" href="#">cuentas y <span class="fw-bold">listas</span></a>
+                  </li>
+                  <li>
+                    <a class="nav-link active" aria-current="page" href="#">devoluciones y <span class="fw-bold">pedidos</span></a>
+                  </li>
+                  <li>
+                    <a class="nav-link active position-relative" aria-current="page" data-bs-toggle="modal" href="exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <i class="fas fa-shopping-cart fa-2x"></i>
+                      <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-warning invisible" id="pill">
+                      <span class="visually-hidden"></span>
+                    </span>
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+  <section id="modal del carrito">
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-white" id="exampleModalLabel">tu carrito </h5>
+        <button type="button" class="btn-close blanquito" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/fotoCarrito.PNG?raw=true" alt="imagen carrito" class="img-fluid" id="fotoC">
+              <hr id="line1" class="invisible">
+              <p id="pesoTotalCarrito" class="verdesito"></p>
+              <p id="costoCasilleroCarrito" class="verdesito"></p>
+            </div>
+            <div class="col-6">
+              <h5 id="tituloC">este carrito esta vacio</h5>
+              <p id="precioUnitarioCarrito"></p>
+              <p id="cantidadC"></p>
+              <p id="pesoUnitarioCarrito"></p>
+              <hr id="line2" class="invisible">
+              <p id="costoImpuesto" class="fw-bold"s></p>
+              <p id="costoTotal" class="fw-bold verdesito"></p>
+              <button type="button" class="invisible btn btn-primary w-100" id="btnConvertir" ><i class="fas fa-coins"></i> convertir a COP</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning " id="btnlimpiar">limpiar <i class="fas fa-trash-alt"></i></button>
+        <button type="button" class="btn btn-dark">comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="img/unnamed.jpg" class="d-block w-100 imgc" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="https://i.ytimg.com/vi/d0SYZ18zq84/maxresdefault.jpg" class="d-block w-100 imgc" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="img/foto1.jpg" class="d-block w-100 imgc" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                        <img src="img/foto2.jpg" class="d-block w-100 imgc" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="img/la pulserita.jpg" class="d-block w-100 imgc" alt="...">
+                                      </div>
+                                      
+                                </div>
+                                
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-5">
+          <div class="row">
+              <div class="col p-5">
+                  <form id="form" class="border border-5 border-primary p-5">
+                    <div class="mb-3 ">
+                      <label for="disabledSelect" class="form-label">consola a escoger</label>
+                      <select id="consola" class="form-select">
+                        <option selected>seleccione...</option>
+                        <option value="1">PS5</option>
+                        <option value="2">XBOX Serie X</option>
+                        <option value="3">Nintendo Switch</option>
+                        <option value="4">poly station</option>
+                        <option value="5">la pulserita</option>
+                      </select>
+                    </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">cantidad</label>
+                        <input type="number" class="form-control" id="cantidad" value="1">
+                      </div>
+                      <div class="mb-3 form-check">
+                        <textarea name="" id="comentarios" cols="30" rows="10" class="form-control" placeholder="dirrecion"></textarea>
+                      </div>
+                      <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary" id="boton">agregar al carrito</button>
+                      </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+</main>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>
+  <script src="controlador.js"></script>
+
+</body>
+</html>

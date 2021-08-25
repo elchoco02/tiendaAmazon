@@ -95,10 +95,10 @@ function pasarValores(){
 //selecionar la informacion de consola segun la escogida por el usuario
 function seleccionarConsola(opcion) {   
     let consolas={
-        nombres:Array("PS5","XBOX Serie X","Nintendo Switch","poly station","la pulserita"),
-        precios:Array(750,700,409,90000,1000000),
-        pesos:Array(14.2,13.1,4.75,800,0.20),
-        fotos:Array("img/unnamed.jpg","img/foto2.jpg","img/foto1.jpg","https://i.ytimg.com/vi/d0SYZ18zq84/maxresdefault.jpg","img/la pulserita.jpg")
+        nombres:Array("PS5","XBOX Serie X","Nintendo Switch","poly station","la pulserita","el fierrogolpeador de parejas felices","la zapatilla kamikaze","la repeleperras","santo grial"),
+        precios:Array(750,700,409,90000,1000000,14020,450,101,400000000000000000),
+        pesos:Array(14.2,13.1,4.75,800,0.20,9,1,1.4,0.75),
+        fotos:Array("img/unnamed.jpg","img/foto2.jpg","img/foto1.jpg","https://i.ytimg.com/vi/d0SYZ18zq84/maxresdefault.jpg","img/la pulserita.jpg","img/ElFierro.png","img/LaZapatillaKamikaze.png","img/larepeleperras.jpg","img/santoGrial.jpg")
     }
     if (opcion==1) {
         nombreConsola=consolas.nombres[0];
@@ -129,6 +129,66 @@ function seleccionarConsola(opcion) {
         precioConsola=consolas.precios[4];
         pesoConsola=consolas.pesos[4];
         fotoConsola=consolas.fotos[4];
+    }
+    else if (opcion==6) {
+        nombreConsola=consolas.nombres[5];
+        precioConsola=consolas.precios[5];
+        pesoConsola=consolas.pesos[5];
+        fotoConsola=consolas.fotos[5];
+    }
+    else if (opcion==7) {
+        nombreConsola=consolas.nombres[6];
+        precioConsola=consolas.precios[6];
+        pesoConsola=consolas.pesos[6];
+        fotoConsola=consolas.fotos[6];
+    }
+    else if (opcion==8) {
+        nombreConsola=consolas.nombres[7];
+        precioConsola=consolas.precios[7];
+        pesoConsola=consolas.pesos[7];
+        fotoConsola=consolas.fotos[7];
+    }
+    else if (opcion==9) {
+        nombreConsola=consolas.nombres[8];
+        precioConsola=consolas.precios[8];
+        pesoConsola=consolas.pesos[8];
+        fotoConsola=consolas.fotos[8];
+    }
+    else if (opcion==10) {
+        nombreConsola=consolas.nombres[9];
+        precioConsola=consolas.precios[9];
+        pesoConsola=consolas.pesos[9];
+        fotoConsola=consolas.fotos[9];
+    }
+    else if (opcion==11) {
+        nombreConsola=consolas.nombres[10];
+        precioConsola=consolas.precios[10];
+        pesoConsola=consolas.pesos[10];
+        fotoConsola=consolas.fotos[10];
+    }
+    else if (opcion==12) {
+        nombreConsola=consolas.nombres[11];
+        precioConsola=consolas.precios[11];
+        pesoConsola=consolas.pesos[11];
+        fotoConsola=consolas.fotos[11];
+    }
+    else if (opcion==13) {
+        nombreConsola=consolas.nombres[12];
+        precioConsola=consolas.precios[12];
+        pesoConsola=consolas.pesos[12];
+        fotoConsola=consolas.fotos[12];
+    }
+    else if (opcion==14) {
+        nombreConsola=consolas.nombres[13];
+        precioConsola=consolas.precios[13];
+        pesoConsola=consolas.pesos[13];
+        fotoConsola=consolas.fotos[13];
+    }
+    else if (opcion==15) {
+        nombreConsola=consolas.nombres[14];
+        precioConsola=consolas.precios[14];
+        pesoConsola=consolas.pesos[14];
+        fotoConsola=consolas.fotos[14];
     }
     else{
         nombreConsola=null;

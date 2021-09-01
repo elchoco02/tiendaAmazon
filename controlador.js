@@ -18,7 +18,14 @@ let fotocarrito=document.getElementById("fotoC");
 let tituloC=document.getElementById("tituloC");
 let line1=document.getElementById("line1");
 let line2=document.getElementById("line2");
-//capturar los datos de la venta
+//elementos informacion de la ventana
+let precioUnitarioCarrito=document.getElementById("precioUnitarioCarrito");;
+let pesoUnitarioCarrito=document.getElementById("pesoUnitarioCarrito");
+let pesoTotalCarrito=document.getElementById("pesoTotalCarrito");
+let costoCasilleroCarrito=document.getElementById("costoCasilleroCarrito");
+let costoImpuesto=document.getElementById("costoImpuesto");
+let costoTotal=document.getElementById("costoTotal");
+
 function capturarDatos() {
     let consola=document.getElementById("consola").value;
     
@@ -42,63 +49,73 @@ function capturarDatos() {
     pill.classList.remove("visible");
     seleccionarConsola(consola);
 
+    let precioTotal=(calculaImpuesto(precioConsola,cantidad))+(calcularCasillleroCosto(pesoConsola,cantidad))
+
     fotocarrito.src=fotoConsola;
 
     tituloC.textContent=nombreConsola;
 
-    let precioUnitarioCarrito=document.getElementById("precioUnitarioCarrito");
     precioUnitarioCarrito.textContent=`$${precioConsola} USD`;
 
-    let pesoUnitarioCarrito=document.getElementById("pesoUnitarioCarrito");
     pesoUnitarioCarrito.textContent=`peso unitario: ${pesoConsola} Lb`;
 
-    let pesoTotalCarrito=document.getElementById("pesoTotalCarrito");
     pesoTotalCarrito.textContent=`peso total: ${pesoConsola*cantidad} Lb`
 
-    let costoCasilleroCarrito=document.getElementById("costoCasilleroCarrito");
-    costoCasilleroCarrito.textContent=`costo casillero= $${calcularCasillleroCosto(pesoConsola,cantidad)} USD`
+    costoCasilleroCarrito.textContent=`costo casillero= $${(calcularCasillleroCosto(pesoConsola,cantidad))} USD`
     
-    let costoImpuesto=document.getElementById("costoImpuesto");
     costoImpuesto.textContent=`costo venta(impuesto): $${calculaImpuesto(precioConsola,cantidad)} USD`
 
-    let precioTotal=(calculaImpuesto(precioConsola,cantidad))+(calcularCasillleroCosto(pesoConsola,cantidad))
-
-    let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo total: $${precioTotal} USD`;
     
+    btnConvertir.textContent="convertir COP"
 }
 //convertidor de valores
 function pasarValores(){
-
-    seleccionarConsola(consola);
-
     let consola=document.getElementById("consola").value;
     
+    let cantidad=document.getElementById("cantidad").value;
+    let dirrecion=document.getElementById("comentarios");
+    let cantidadC=document.getElementById("cantidadC");
+    cantidadC.textContent=`cantidad: ${cantidad}`;
+
+    btnConvertir.classList.add("visible");
+    btnConvertir.classList.remove("invisible");
+
+    line1.classList.add("visible");
+    line2.classList.add("visible");
+    line1.classList.remove("invisible");
+    line2.classList.remove("invisible");
     
-    let precioUnitarioCarrito=document.getElementById("precioUnitarioCarrito");
+    let pill=document.getElementById("pill");
+    pill.textContent=cantidad;
+    pill.classList.remove("invisible");
+    pill.classList.remove("visible");
+    seleccionarConsola(consola);
     precioUnitarioCarrito.textContent=`$${convertirdolarapesos(precioConsola)} COP`;
 
-    let costoCasilleroCarrito=document.getElementById("costoCasilleroCarrito");
-    costoCasilleroCarrito.textContent=`costo casillero= $${convertirdolarapesos(casillero)} COP`
-    let casillero=calcularCasillleroCosto(pesoConsola,cantidad);
+    pesoUnitarioCarrito.textContent=`peso unitario: ${(pesoConsola)} Lb`;
 
-    let costoImpuesto=document.getElementById("costoImpuesto");
-    costoImpuesto.textContent=`costo venta(impuesto): $${convertirdolarapesos(impuesto)} COP`
-    let impuesto=calculaImpuesto(precioConsola,cantidad);
+    pesoTotalCarrito.textContent=`peso total: ${pesoConsola*cantidad} Lb`;
 
-    let costoTotal=document.getElementById("costoTotal");
-    costoTotal.textContent=`Costo total: $${convertirdolarapesos(precioTotal)} COP`;    
+    costoCasilleroCarrito.textContent=`costo casillero= $${convertirdolarapesos(calcularCasillleroCosto(pesoConsola,cantidad))} COP`
     
-    let precioTotal=(calculaImpuesto(precioConsola,cantidad))+(calcularCasillleroCosto(pesoConsola,cantidad))
+    costoImpuesto.textContent=`costo venta(impuesto): $${convertirdolarapesos(calculaImpuesto(precioConsola,cantidad))} COP`
 
+    let precioTotal=convertirdolarapesos(calcularCasillleroCosto(pesoConsola,cantidad))+convertirdolarapesos(calculaImpuesto(precioConsola,cantidad))
+
+    costoTotal.textContent=`Costo total: $${(precioTotal)} COP`;
+
+    btnConvertir.textContent="listo todo esta en pesos colombia"
+
+    btnConvertir.addEventListener("click",capturarDatos)
 }
 //selecionar la informacion de consola segun la escogida por el usuario
 function seleccionarConsola(opcion) {   
     let consolas={
-        nombres:Array("PS5","XBOX Serie X","Nintendo Switch","poly station","la pulserita","el fierrogolpeador de parejas felices","la zapatilla kamikaze","la repeleperras","santo grial"),
-        precios:Array(750,700,409,90000,1000000,14020,450,101,400000000000000000),
-        pesos:Array(14.2,13.1,4.75,800,0.20,9,1,1.4,0.75),
-        fotos:Array("img/unnamed.jpg","img/foto2.jpg","img/foto1.jpg","https://i.ytimg.com/vi/d0SYZ18zq84/maxresdefault.jpg","img/la pulserita.jpg","img/ElFierro.png","img/LaZapatillaKamikaze.png","img/larepeleperras.jpg","img/santoGrial.jpg")
+        nombres:Array("PS5","XBOX Serie X","Nintendo Switch","poly station","la pulserita","el fierrogolpeador de parejas felices","la zapatilla kamikaze","la repeleperras","santo grial","elefente guerrero psiquico ancestral","artorias figura (The Abysswalker)","entrada a los viernes de la jungla","evangelion unidad 01"),
+        precios:Array(750,700,409,90000,1000000,14020,450,101,400000000000000000,7,120,20,1500000),
+        pesos:Array(14.2,13.1,4.75,800,0.20,9,1,1.4,0.75,12000,0.3,0.0001,143300),
+        fotos:Array("img/unnamed.jpg","img/foto2.jpg","img/foto1.jpg","https://i.ytimg.com/vi/d0SYZ18zq84/maxresdefault.jpg","img/la pulserita.jpg","img/ElFierro.png","img/LaZapatillaKamikaze.png","img/larepeleperras.jpg","img/santoGrial.jpg","img/elefante_g.jpg","img/artorias.png","img/viernes.jpg","img/chogoqui.jpg")
     }
     if (opcion==1) {
         nombreConsola=consolas.nombres[0];

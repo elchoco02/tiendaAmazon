@@ -260,6 +260,10 @@ function limpiarCarrito(){
     let costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=null
 
+    let cantidadC=document.getElementById("cantidadC");
+    cantidadC.textContent=null;
+
+
     let pill=document.getElementById("pill");
     pill.textContent=null;
     pill.classList.add("invisible");

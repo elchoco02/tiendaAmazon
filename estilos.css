@@ -11,3 +11,19 @@
 .imgc{
     height: 630px;
 }
+
+#i-f{
+    background-image: url("https://i.pinimg.com/originals/99/c9/26/99c92633ce07c42d11dcb707ed0bd52f.jpg");
+    background-size: cover;
+    background-attachment: inherit;
+}
+#s-b{
+    background-color: palegreen;
+}
+
+#f-f{
+    background-color: white;
+}
+footer{
+    background-color: blue;
+}

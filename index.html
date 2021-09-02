@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/amazon.png?raw=true" alt="" height="35"></a>
+              <a class="navbar-brand" href="index.html"><img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/amazon.png?raw=true" alt="" height="35"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,7 +39,7 @@
                     <a class="nav-link active" aria-current="page" href="#">cuentas y <span class="fw-bold">listas</span></a>
                   </li>
                   <li>
-                    <a class="nav-link active" aria-current="page" href="#">devoluciones y <span class="fw-bold">pedidos</span></a>
+                    <a class="nav-link active" aria-current="page" href="pedidos.html">devoluciones y <span class="fw-bold">pedidos</span></a>
                   </li>
                   <li>
                     <a class="nav-link active position-relative" aria-current="page" data-bs-toggle="modal" href="exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -94,8 +94,8 @@
   </div>
 </div>
   </section>
-    <main>
-        <div class="container mt-5">
+    <main id="s-b">
+        <div class="container-fluid mt-5" >
             <div class="row">
                 <div class="col">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -154,46 +154,56 @@
             </div>
         </div>
 
-        <div class="container p-5">
-          <div class="row">
-              <div class="col p-5">
-                  <form id="form" class="border border-5 border-primary p-5">
-                    <div class="mb-3 ">
-                      <label for="disabledSelect" class="form-label">consola a escoger</label>
-                      <select id="consola" class="form-select">
-                        <option selected>seleccione...</option>
-                        <option value="1">PS5</option>
-                        <option value="2">XBOX Serie X</option>
-                        <option value="3">Nintendo Switch</option>
-                        <option value="4">poly station</option>
-                        <option value="5">la pulserita</option>
-                        <option value="6">el fierro golpeador de parejas felices</option>
-                        <option value="7">la zapatilla kamikaze</option>
-                        <option value="8">la repeleperras</option>
-                        <option value="9">el santo grial(unidades limitadas)</option>
-                        <option value="10">elefente guerrero psiquico ancestral</option>
-                        <option value="11">figura de artorias</option>
-                        <option value="12">entrada a los viernes de la jungla</option>
-                        <option value="13">evangelion unidad 01</option>
-                        
-                      </select>
-                    </div>
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">cantidad</label>
-                        <input type="number" class="form-control" id="cantidad" value="1">
-                      </div>
-                      <div class="mb-3 form-check">
-                        <textarea name="" id="comentarios" cols="30" rows="10" class="form-control" placeholder="dirrecion"></textarea>
-                      </div>
-                      <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-primary" id="boton">agregar al carrito</button>
-                      </div>
-                    </form>
+        <div class="row">
+          <div class="col mt-3 img-fluid" id="i-f">
+          </div>
+          <div class="col">
+            <div class="container p-5" id="f-f">
+              <div class="row">
+                  <div class="col p-5">
+                      <form id="form" class="border border-5 border-primary p-5">
+                        <div class="mb-3 ">
+                          <label for="disabledSelect" class="form-label">consola a escoger</label>
+                          <select id="consola" class="form-select">
+                            <option selected>seleccione...</option>
+                            <option value="1">PS5</option>
+                            <option value="2">XBOX Serie X</option>
+                            <option value="3">Nintendo Switch</option>
+                            <option value="4">poly station</option>
+                            <option value="5">la pulserita</option>
+                            <option value="6">el fierro golpeador de parejas felices</option>
+                            <option value="7">la zapatilla kamikaze</option>
+                            <option value="8">la repeleperras</option>
+                            <option value="9">el santo grial(unidades limitadas)</option>
+                            <option value="10">elefente guerrero psiquico ancestral</option>
+                            <option value="11">figura de artorias</option>
+                            <option value="12">entrada a los viernes de la jungla</option>
+                            <option value="13">evangelion unidad 01</option>
+                            
+                          </select>
+                        </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" value="1">
+                          </div>
+                          <div class="mb-3 form-check">
+                            <textarea name="" id="comentarios" cols="30" rows="10" class="form-control" placeholder="dirrecion"></textarea>
+                          </div>
+                          <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-primary" id="boton">agregar al carrito</button>
+                          </div>
+                        </form>
+                  </div>
               </div>
           </div>
-      </div>
+          </div>
+        </div>
+        
 </main>
     
+<footer>
+        <p> &copy; 2021</p>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>
